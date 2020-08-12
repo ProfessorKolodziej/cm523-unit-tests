@@ -1,0 +1,19 @@
+{
+  "name": "cm523-fall2020",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ashleykolodziej@github.com/ProfessorKolodziej/cm523-fall2020.git"
+  },
+  "author": "Ashley Kolodziej",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProfessorKolodziej/cm523-fall2020/issues"
+  },
+  "homepage": "https://github.com/ProfessorKolodziej/cm523-fall2020#readme"
+}
