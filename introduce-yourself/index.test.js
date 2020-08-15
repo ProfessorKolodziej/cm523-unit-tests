@@ -10,7 +10,7 @@ let dom
 let container
 
 expect.extend({
-  toHaveOneH1(received) {
+  toHaveOneH1( received ) {
     const pass = received.querySelector('h1').length === '1';
 
     if ( pass ) {
@@ -36,6 +36,6 @@ describe('index.html', () => {
   })
 
   test('renders a heading element', () => {
-    expect(container.toHaveOneH1())
+    expect( container ).toHaveOneH1()
   })
 })
