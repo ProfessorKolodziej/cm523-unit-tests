@@ -10,7 +10,12 @@ let dom
 let container
 
 describe('index.html', () => {
-  test('A single `<h1>` is used', () => {
-    expect(container.querySelectorAll('h1')).toHaveLength(1)
-  });
+  beforeEach(() => {
+    dom = new JSDOM( html )
+    container = dom.window.document.body
+  })
+
+  test('renders a heading element', () => {
+    expect(container.querySelector('h1')).not.toBeNull()
+  })
 })
