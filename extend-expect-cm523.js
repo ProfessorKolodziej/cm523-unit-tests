@@ -22,4 +22,25 @@ expect.extend({
 			};
 		}
 	},
+	allTextIsWrapped( received ) {
+		const childNodes = received.childNodes;
+
+		for ( var i = 0; i < childNodes.length; i++ ) {
+			let node = childNodes[i];
+
+			if ( node.nodeName === "#text" && node.nodeValue.trim() ) {
+				return {
+					message: () =>
+						`All text on this page should be wrapped in heading or <p> tags.`,
+					pass: false,
+				};
+			}
+		}
+
+		return {
+			message: () =>
+				`All text is wrapped.`,
+			pass: true,
+		};
+	},
 });
