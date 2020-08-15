@@ -18,7 +18,7 @@ describe('index.html', () => {
 	} );
 
 	test('All HTML is valid', () => {
-		expect( dom ).toHTMLValidate();
+		expect( html ).toHTMLValidate();
 	} );
 
 	test('Has one h1 tag', () => {
