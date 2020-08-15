@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/ProfessorKolodziej/cm523-fall2020#readme",
   "dependencies": {
-    "regenerator-runtime": "^0.13.5"
-  },
-  "devDependencies": {
+    "regenerator-runtime": "^0.13.5",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@testing-library/dom": "^7.2.1",
