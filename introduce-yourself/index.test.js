@@ -3,6 +3,7 @@ import '@testing-library/jest-dom/extend-expect'
 import { JSDOM } from 'jsdom'
 import fs from 'fs'
 import path from 'path'
+import "html-validate/jest"
 import '../extend-expect-cm523'
 
 const html = fs.readFileSync(path.resolve('src', './index.html'), 'utf8');
@@ -14,6 +15,10 @@ describe('index.html', () => {
 	beforeEach(() => {
 		dom = new JSDOM( html );
 		container = dom.window.document.body;
+	} );
+
+	test('All HTML is valid', () => {
+		expect( dom ).toHTMLValidate();
 	} );
 
 	test('Has one h1 tag', () => {
