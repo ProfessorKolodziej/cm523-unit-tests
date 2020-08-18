@@ -15,15 +15,15 @@ describe('index.html', () => {
 		expect( html ).toHTMLValidate();
 	} );
 
-	test('All text is wrapped HTML tags', () => {
-		expect( container ).allTextIsWrapped();
-	} );
-
 	test('Has a paragraph at the beginning of the page containing "Hello, world!"', () => {
 		expect( container.querySelector( 'p' ).textContent ).toBe( 'Hello, world!' );
 	} );
 
 	test('Has at least two paragraphs', () => {
 		expect( container.querySelectorAll( 'p' ).length ).toBeGreaterThanOrEqual( 2 );
+	} );
+
+	test('Uses the code example from the template', () => {
+		expect( container.querySelector( 'code' ) ).not.toBeNull();
 	} );
 })
