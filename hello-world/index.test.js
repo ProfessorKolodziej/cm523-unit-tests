@@ -24,6 +24,6 @@ describe('index.html', () => {
 	} );
 
 	test('Has at least two paragraphs', () => {
-		expect( container.querySelectorAll( 'p' ).length ).toBeGreaterThanOrEqualTo( 2 );
+		expect( container.querySelectorAll( 'p' ).length ).toBeGreaterThanOrEqual( 2 );
 	} );
 })
