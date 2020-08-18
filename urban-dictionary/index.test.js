@@ -49,7 +49,7 @@ describe('index.html', () => {
 	} );
 
 	test('Has at least two examples in li tags', () => {
-		expect( container.querySelector( 'li' ).length ).toBe(2);
+		expect( container.querySelectorAll( 'li' ).length ).toBeGreaterThanOrEqual(2);
 	} );
 
 	test('Examples are italicized using em tags', () => {
