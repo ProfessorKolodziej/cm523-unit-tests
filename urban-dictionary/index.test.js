@@ -71,6 +71,6 @@ describe('index.html', () => {
 	} );
 
 	test('At least one abbreviation or citation is present', () => {
-		expect( container.toHaveAbbrOrCite();
+		expect( container.toHaveAbbrOrCite() );
 	} );
 })
