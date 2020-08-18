@@ -12,8 +12,8 @@ const html = fs.readFileSync(path.resolve('', './index.html'), 'utf8'),
 
 expect.extend({
 	toHaveAbbrOrCite( received ) {
-		const abbr = received.querySelectorAll( 'abbr' ),
-				cite = received.querySelectorAll( 'cite' );
+		const abbr = received.querySelector( 'abbr' ),
+				cite = received.querySelector( 'cite' );
 
 		if ( abbr || cite ) {
 			return {
