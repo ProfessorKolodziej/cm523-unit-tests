@@ -20,6 +20,6 @@ describe('index.html', () => {
 	} );
 
 	test('Has a paragraph at the beginning of the page containing "Hello, world!"', () => {
-		expect( container.querySelector( 'p' ) ).text.toBe( 'Hello, world!' );
+		expect( container.querySelector( 'p' ) ).innerText.toBe( 'Hello, world!' );
 	} );
 })
