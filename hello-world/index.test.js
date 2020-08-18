@@ -20,6 +20,10 @@ describe('index.html', () => {
 	} );
 
 	test('Has a paragraph at the beginning of the page containing "Hello, world!"', () => {
-		expect( container.querySelector( 'p' ).innerText ).toBe( 'Hello, world!' );
+		expect( container.querySelector( 'p' ).textContent ).toBe( 'Hello, world!' );
+	} );
+
+	test('Has at least two paragraphs', () => {
+		expect( container.querySelectorAll( 'p' ).length ).toBeGreaterThanOrEqualTo( 2 );
 	} );
 })
