@@ -6,10 +6,9 @@ import path from 'path'
 import "html-validate/jest"
 import '../extend-expect-cm523'
 
-const html = fs.readFileSync(path.resolve('', './index.html'), 'utf8');
-
-let dom
-let container
+const html = fs.readFileSync(path.resolve('', './index.html'), 'utf8'),
+		dom = new JSDOM( html ),
+		container = dom.window.document.body;
 
 expect.extend({
 	toHaveAbbrOrCite( received ) {
@@ -33,11 +32,6 @@ expect.extend({
 });
 
 describe('index.html', () => {
-	beforeEach(() => {
-		dom = new JSDOM( html );
-		container = dom.window.document.body;
-	} );
-
 	test('All HTML is valid', () => {
 		expect( html ).toHTMLValidate();
 	} );
