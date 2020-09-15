@@ -18,7 +18,10 @@ describe('index.html', () => {
 	} );
 
 	test('All HTML is valid', () => {
-		expect( html ).toHTMLValidate();
+		expect( html ).toHTMLValidate( {
+			extends: ["html-validate:standard"],
+			root: true
+		} );
 	} );
 
 	test('Has one h1 tag', () => {

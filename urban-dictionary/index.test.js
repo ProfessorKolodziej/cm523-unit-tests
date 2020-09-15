@@ -33,7 +33,10 @@ expect.extend({
 
 describe('index.html', () => {
 	test('All HTML is valid', () => {
-		expect( html ).toHTMLValidate();
+		expect( html ).toHTMLValidate( {
+			extends: ["html-validate:standard"],
+			root: true
+		} );
 	} );
 
 	test('All text is wrapped HTML tags', () => {
