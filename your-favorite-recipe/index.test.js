@@ -12,9 +12,10 @@ const html = fs.readFileSync(path.resolve('', './index.html'), 'utf8'),
 
 describe('index.html', () => {
 	test('All HTML is valid', () => {
-		expect( html ).toHTMLValidate({
-			extends: ["html-validate:standard"]
-		});
+		expect( html ).toHTMLValidate( {
+			extends: ["html-validate:standard"],
+			root: true
+		} );
 	} );
 
 	test('Your recipe includes a title, introduction paragraph, ingredients, and directions. (Hint: be sure to use semantic tags.)', () => {
