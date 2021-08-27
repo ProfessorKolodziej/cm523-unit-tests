@@ -6,7 +6,7 @@ import path from 'path'
 import "html-validate/jest"
 import '../extend-expect-cm523'
 
-const html = fs.readFileSync(path.resolve('', './index.html'), 'utf8'),
+const html = fs.readFileSync(path.resolve('', 'src/index.html'), 'utf8'),
 		dom = new JSDOM( html ),
 		container = dom.window.document.body;
 
