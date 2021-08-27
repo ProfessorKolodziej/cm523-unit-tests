@@ -8,13 +8,11 @@ import '../extend-expect-cm523'
 
 const html = fs.readFileSync(path.resolve('', './src/index.html'), 'utf8'),
 		dom = new JSDOM( html ),
-		container = dom.window.document.body;
+		container = dom.window.document.body,
+		document = dom.window.document;
 
 describe('index.html', () => {
-	test('All HTML is valid', () => {
-		expect( html ).toHTMLValidate( {
-			extends: ["html-validate:standard"],
-			root: true
-		} );
+	test('Title is updated', () => {
+		expect( document.title ).not.toEqual( 'Update your title here' );
 	} );
 })
