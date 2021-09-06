@@ -22,11 +22,11 @@ describe('index.html', () => {
 		expect( container.querySelector( 'p' ).textContent ).toBe( 'Hello, world!' );
 	} );
 
-	test('Has at least two paragraphs', () => {
+	test('Has at least two paragraph (<p>) tags', () => {
 		expect( container.querySelectorAll( 'p' ).length ).toBeGreaterThanOrEqual( 2 );
 	} );
 
-	test('Uses the code example from the template', () => {
+	test('Uses the code example from the template (hint: make sure you have a <code> tag)', () => {
 		expect( container.querySelector( 'code' ) ).not.toBeNull();
 	} );
 })
