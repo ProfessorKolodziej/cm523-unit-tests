@@ -27,7 +27,9 @@
     "babel-jest": "^25.3.0",
     "html-validate": "^3.0.0",
     "jest": "^25.3.0",
-    "jsdom": "^22.1.0",
     "serve": "^11.3.0"
+  },
+  "dependencies": {
+    "jsdom": "^22.1.0"
   }
 }
