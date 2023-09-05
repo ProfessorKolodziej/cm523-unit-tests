@@ -18,7 +18,7 @@ describe('index.html', () => {
 		} );
 	} );
   
-  test('Has an h1 tag at the beginning of the page containing the text "Hello, world!"', () => {
+  test('Has an h1 tag at the beginning of the page containing the correct text', () => {
 		expect( container.querySelector( 'h1' ).textContent ).toBe( 'Hello, world!' );
 	} );
 
