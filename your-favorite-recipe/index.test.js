@@ -18,10 +18,19 @@ describe('index.html', () => {
 		} );
 	} );
 
-	test('Your recipe includes a title, introduction paragraph, ingredients, and directions. (Hint: be sure to use semantic tags.)', () => {
+	test('Your recipe includes a title using an h1 tag.', () => {
 		expect( container.querySelector( 'h1' ) ).not.toBeNull();
+	} );
+
+	test('Your recipe includes an introduction paragraph.', () => {
 		expect( container.querySelector( 'p' ) ).not.toBeNull();
+	} );
+
+	test('Your recipe includes ingredients, using the ul tag.', () => {
 		expect( container.querySelector( 'ul' ) ).not.toBeNull();
+	} );
+
+	test('Your recipe includes directions, using the ol tag.', () => {
 		expect( container.querySelector( 'ol' ) ).not.toBeNull();
 	} );
 });
