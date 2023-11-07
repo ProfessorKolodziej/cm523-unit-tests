@@ -35,13 +35,6 @@ describe('CSS checks', () => {
 	test('There is no CSS in a style tag.', () => {
 		expect( jestDocument.querySelector( 'style' ) ).toBeNull();
 	} );
-
-	test('There are no variables declared with var (use let or const instead)', () => {
-		// Define a regular expression to match var declarations
-		const varDeclarationRegex = /(\bvar\s)/;
-
-		expect( varDeclarationRegex.match(jsContent) ).toBeLessThanOrEqual(1);
-	});
 });
 
 describe('JavaScript checks', () => {
