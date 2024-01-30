@@ -35,7 +35,7 @@ describe('index.html', () => {
 		expect( jestBody.querySelector( 'ul' ) ).not.toBeNull();
 	} );
 
-	test('Your website includes a helpful link, using the a tag.', () => {
+	test('Your website includes at least one helpful link, using the a tag.', () => {
 		expect( jestBody.querySelector( 'a' ) ).not.toBeNull();
 	} );
 });
