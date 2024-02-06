@@ -8,9 +8,12 @@ import '../extend-expect-cm523'
 
 const css = fs.readFileSync(path.resolve('', './src/css/style.css'), 'utf8');
 
-describe('index.html', () => {
-	test('Has a heading tag at the beginning of the page containing the correct text', () => {
-		console.log(css)
-		expect( container.querySelector( 'h1' ).textContent ).toBe( 'I did it!' );
+describe('style.css', () => {
+	test('You used `display: grid;` in your CSS at least once.', () => {
+		expect(css).toContain('display: grid;');
+	} );
+
+	test('You used `position: absolute;` in your CSS at least once.', () => {
+		expect(css).toContain('position: absolute;');
 	} );
 })
