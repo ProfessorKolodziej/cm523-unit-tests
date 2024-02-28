@@ -9,11 +9,11 @@ import '../extend-expect-cm523'
 const css = fs.readFileSync(path.resolve('', './src/css/style.css'), 'utf8');
 
 describe('style.css', () => {
-	test('You used `display: grid;` in your CSS at least once.', () => {
+	test('You used display: grid; in your CSS at least once.', () => {
 		expect(css).toContain('display: grid;');
 	} );
 
-	test('You used `position: absolute;` in your CSS at least once.', () => {
+	test('You used position: absolute; in your CSS at least once.', () => {
 		expect(css).toContain('position: absolute;');
 	} );
 })
