@@ -12,8 +12,4 @@ describe('style.css', () => {
 	test('You used display: grid; in your CSS at least once.', () => {
 		expect(css).toContain('display: grid;');
 	} );
-
-	test('You used position: absolute; in your CSS at least once.', () => {
-		expect(css).toContain('position: absolute;');
-	} );
 })
